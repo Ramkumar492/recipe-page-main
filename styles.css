@@ -1,0 +1,149 @@
+:root {
+
+    --White: hsl(0, 0%, 100%);
+
+    --Stone100: hsl(30, 54%, 90%);
+    --Stone150: hsl(30, 18%, 87%);
+    --Stone600: hsl(30, 10%, 34%);
+    --Stone900: hsl(24, 5%, 18%);
+
+    --Brown800: hsl(14, 45%, 36%);
+
+    --Rose800: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,svg{
+   display: inline-block;
+   width: 100%; 
+}
+ul,ol{
+    list-style-position: outside;
+    /* padding: 1rem; */
+}
+
+body {
+
+    height: 100%;
+    background-color: var(--Stone100);
+    font-family: "Outfit", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Stone600);
+}
+
+.wrapper{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+  max-width: 750px;  
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 3rem;
+
+}
+.card-img img{
+
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-name{
+  
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 1rem;
+    color: var(--Stone900);
+}
+.recipe-description{
+    margin-bottom: 1rem;
+}
+.preparation-time{
+    background-color: var(--Rose50);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+}
+.preparation-time h3{
+    color: var(--Rose800);
+    margin-bottom: 0.6rem;
+}
+.bold{
+    font-weight: 600;
+}
+
+.sub-heading{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--Brown800);
+    margin-bottom: 1rem;
+}
+
+.ingredients{
+    margin-bottom: 1rem;
+}
+.instructions{
+    margin-bottom: 1rem;
+}
+
+ol,ul{
+    margin-left: 1rem
+}
+ol li{
+  padding-left: 1rem; /* Adjust the space */
+}
+
+ul li{
+    padding-left: 0.6rem;
+}
+hr{
+    opacity: 0.4;
+    margin-bottom: 1rem;
+    color: var(--Stone100);;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tr{
+    border-bottom: 1px solid var(--Stone100);
+    padding: 1rem;
+}
+td{
+    /* margin: auto; */
+    padding: 0.8rem;
+
+}
+.nutrition{
+    margin-bottom: 2rem;
+}
+
+tr td:nth-child(2){
+    color: var(--Brown800);
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 95%;      /* Use 90% for slight padding from edges */
+        max-width: 100%; /* Ensure it doesn't exceed the container */
+        margin: 1rem auto; /* Center the card and adjust margin */
+    }
+}
